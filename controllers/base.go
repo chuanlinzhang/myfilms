@@ -20,3 +20,6 @@ func Lang()  {
 		}
 	}
 }
+func (this *BaseController) Get()  {
+	this.Redirect(beego.URLFor("customers.LoginController.Get"),302)
+}
