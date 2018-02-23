@@ -2,10 +2,10 @@
 {{define "head"}}
 <title>{{i18n .Lang "welcome"}} - {{i18n .Lang "app_intro"}}</title>
 <style type="text/css">
-    #d1{
+    #d1 {
         position: absolute;
-        left:20%;
-        top:15%;
+        left: 20%;
+        top: 15%;
         width: 48%;
         height: 60%;
     }
@@ -17,47 +17,37 @@
 <ul class="nav nav-pills nav-justified">
     <li class="dropdown active">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            Home <span class="caret"></span>
+            管理员Home <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-            <li><a href="/customers-function1">个人信息</a></li>
-            <li><a href="/customers-function2">修改基本信息</a></li>
+            <li><a href="/admins-function1">管理员个人信息</a></li>
+            <li><a href="/admins-function2">修改基本信息</a></li>
             <li><a href="#">修改密码</a></li>
-            <li><a href="/customers-function4">账户金额充值</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            影片排行榜 <span class="caret"></span>
+            影片管理 <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-            <li><a href="/customers-ranking1">热度</a></li>
-            <li><a href="/customers-ranking2">新片</a></li>
-            <li><a href="/customers-ranking3">口碑</a></li>
+            <li><a href="/admins-movie1">浏览影片</a></li>
+            <li><a href="/admins-movie2">添加影片</a></li>
+            <li><a href="/admins-movie3">修改影片</a></li>
+            <li><a href="/admins-movie4">删除影片</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            影票 <span class="caret"></span>
+            会员管理 <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-            <li><a href="/customers-tickets1">影票查询</a></li>
-            <li><a href="/customers-tickets2">影票购买</a></li>
-            <li><a href="/customers-tickets3">影票评分</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            订单 <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="/customers-order1">订单查询</a></li>
-            <li><a href="/customers-order2">退票</a></li>
+            <li><a href="/admins-member1">浏览会员</a></li>
+            <li><a href="/admins-member2">删除会员</a></li>
         </ul>
     </li>
     <div style="border-color: seagreen;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>当前用户：{{ .customers.Nickname}}</span><br><br>
-        <a href="/customers/exit">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>当前用户：{{ .admins.AdminNickName}}</span><br><br>
+        <a href="/admins/exit">
             <span style="color:rebeccapurple;font-size: 12px;position: relative;left: 30px" >退出登录</span>
         </a>
     </div>
@@ -96,4 +86,5 @@
         </div>
     </form>
 </div>
+修改密码
 {{end}}

@@ -3,6 +3,7 @@ package customers
 import (
 	"github.com/astaxie/beego"
 	"bs/myfilms/models/users"
+
 )
 
 type RegisterController struct {
@@ -21,6 +22,7 @@ func (this *RegisterController) Register() {
 	name := this.GetString("name")
 	mobile := this.GetString("mobile")
 	sex := this.GetString("sex")
+
 	if cpwd1 != cpwd2 {
 		this.Redirect(beego.URLFor("customers.RegisterController.Get"), 302)
 		return

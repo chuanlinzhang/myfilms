@@ -1,6 +1,10 @@
 package films
 
-import "gopkg.in/mgo.v2"
+import (
+	"gopkg.in/mgo.v2"
+
+	"bs/myfilms/models/mongoDB"
+)
 
 /*
 影片信息
@@ -22,5 +26,9 @@ type Films struct {
 var collectionFilms *mgo.Collection
 
 func init() {
+	dbname:=Dbname
+	conn:=mongoDB.Dbsession.Copy()
+	DB:=conn.DB(dbname)
+
 	collectionFilms = DB.C("films")
 }

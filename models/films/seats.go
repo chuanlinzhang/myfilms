@@ -1,6 +1,9 @@
 package films
 
-import "gopkg.in/mgo.v2"
+import (
+	"gopkg.in/mgo.v2"
+	"bs/myfilms/models/mongoDB"
+)
 
 /*
 电影院放映厅座位表
@@ -15,5 +18,9 @@ type Seats struct {
 }
 var collectionSeats *mgo.Collection
 func init() {
+	dbname:=Dbname
+	conn:=mongoDB.Dbsession.Copy()
+	DB:=conn.DB(dbname)
+
 	collectionSeats=DB.C("seats")
 }

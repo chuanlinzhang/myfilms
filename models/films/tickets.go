@@ -1,6 +1,9 @@
 package films
 
-import "gopkg.in/mgo.v2"
+import (
+	"gopkg.in/mgo.v2"
+	"bs/myfilms/models/mongoDB"
+)
 
 /*
 影票信息
@@ -21,5 +24,9 @@ type Tickets struct {
 }
 var collectionTickets *mgo.Collection
 func init() {
+	dbname:=Dbname
+	conn:=mongoDB.Dbsession.Copy()
+	DB:=conn.DB(dbname)
+
 	collectionTickets=DB.C("tickets")
 }

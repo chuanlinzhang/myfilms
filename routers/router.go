@@ -16,6 +16,7 @@ func init() {
 
 	beego.Router("/customers/login", &customers.LoginController{})
 	beego.Router("/customers/login/check", &customers.LoginController{}, "Post:Login")
+	beego.Router("/customers/exit",&customers.ExitController{},"Get:Exit")
 
 	beego.Router("/customers/register", &customers.RegisterController{})
 	beego.Router("/customers/register/check", &customers.RegisterController{}, "Post:Register")
@@ -36,13 +37,23 @@ func init() {
 	beego.Router("/customers-order1", &orders.ChangeOrderController{}, "Get:ChangeOrder1")
 	beego.Router("/customers-order2", &orders.ChangeOrderController{}, "Get:ChangeOrder2")
 
-
-
-
-
 	beego.Router("/admins/login", &admins.LoginController{})
 	beego.Router("/admins/login/check", &admins.LoginController{}, "Post:Login")
+	beego.Router("/admins/exit",&admins.ExitController{},"Get:Exit")
 
 	beego.Router("/admins/register", &admins.RegisterController{})
 	beego.Router("/admins/register/check", &admins.RegisterController{}, "Post:Register")
+
+	beego.Router("/admins-function1", &admins.ChangeController{}, "Get:Change1")
+	beego.Router("/admins-function2", &admins.ChangeController{}, "Get:Change2")
+	beego.Router("/admins-function3", &admins.ChangeController{}, "Get:Change3")
+
+	beego.Router("/admins-movie1", &films.AdminfilmController{}, "Get:Adminflim1")
+	beego.Router("/admins-movie2", &films.AdminfilmController{}, "Get:Adminflim2")
+	beego.Router("/admins-movie3", &films.AdminfilmController{}, "Get:Adminflim3")
+	beego.Router("/admins-movie4", &films.AdminfilmController{}, "Get:Adminflim4")
+
+	beego.Router("/admins-member1", &admins.ChangeController{}, "Get:ChangeCustomers1")
+	beego.Router("/admins-member2", &admins.ChangeController{}, "Get:ChangeCustomers2")
+
 }

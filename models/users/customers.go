@@ -10,6 +10,9 @@ import (
 	"time"
 	"github.com/astaxie/beego/validation"
 	"gopkg.in/mgo.v2/bson"
+	"bs/myfilms/models/mongoDB"
+	"github.com/astaxie/beego/logs"
+
 )
 
 type Customers struct {
@@ -30,10 +33,21 @@ type Customers struct {
 var collectionCustomers *mgo.Collection
 
 func init() {
-	collectionCustomers = films.DB.C("customers")
+	dbname:=films.Dbname
+	conn:=mongoDB.Dbsession.Copy()
+	DB:=conn.DB(dbname)
+	collectionCustomers = DB.C("customers")
 }
 func Register(loginName, pwd, email, nickName, name, moile, sex string) bool {
-	customers := &Customers{
+
+
+	customers:=&Customers{}
+	err:=collectionCustomers.Find(bson.M{"login_name":loginName}).One(customers)
+	if err == nil {
+		logs.Info("用户已存在")
+		return false
+	}
+	customers = &Customers{
 		LoginName: loginName,
 		Pwd:       pwd,
 		Email:     email,
@@ -49,7 +63,7 @@ func Register(loginName, pwd, email, nickName, name, moile, sex string) bool {
 	}
 	//验证用户输入信息格式是否正确
 	valid:=validation.Validation{}
-	_,err:=valid.Valid(customers)
+	_,err=valid.Valid(customers)
 	if err!=nil{
 		return false
 	}

@@ -47,7 +47,12 @@
             <li><a href="/customers-order2">退票</a></li>i>
         </ul>
     </li>
-
+    <div style="border-color: seagreen;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>当前用户：{{ .customers.Nickname}}</span><br><br>
+        <a href="/customers/exit">
+            <span style="color:rebeccapurple;font-size: 12px;position: relative;left: 30px" >退出登录</span>
+        </a>
+    </div>
 </ul>
 影票购买
 {{end}}

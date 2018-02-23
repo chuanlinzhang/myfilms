@@ -11,8 +11,12 @@ func (this *ChangeOrderController) ChangeOrder()  {
 	
 }
 func (this *ChangeOrderController) ChangeOrder1()  {
+	customers:=this.GetSession("customers")
+	this.Data["customers"]=customers
 this.TplName="customers-order1.html"
 }
 func (this *ChangeOrderController) ChangeOrder2()  {
+	customers:=this.GetSession("customers")
+	this.Data["customers"]=customers
 	this.TplName="customers-order2.html"
 }

@@ -8,6 +8,11 @@ import (
 	"gopkg.in/mgo.v2"
 	"bs/myfilms/models/films"
 	"github.com/astaxie/beego/validation"
+	"gopkg.in/mgo.v2/bson"
+
+	"time"
+	"bs/myfilms/models/mongoDB"
+	"github.com/astaxie/beego/logs"
 )
 
 type Admins struct {
@@ -23,29 +28,51 @@ type Admins struct {
 }
 
 var collectionAdmins *mgo.Collection
+
 func init() {
-	collectionAdmins=films.DB.C("admins")
+	dbname := films.Dbname
+	conn := mongoDB.Dbsession.Copy()
+	DB := conn.DB(dbname)
+	collectionAdmins = DB.C("admins")
 }
 
-func RegisterA(adminLogin,adminPwd,adminNickname,adminName,adminMobile,adminSex,adminEmail string) bool {
-	admins:=&Admins{
-		AdminLogin:adminLogin,
-		AdminPwd:adminPwd,
-		AdminNickName:adminNickname,
-		AdminName:adminName,
-		AdminMobile:adminMobile,
-		AdminSex:adminSex,
-		AdminEmail:adminEmail,
-	}
-	//验证用户输入信息格式是否正确
-	valid:=validation.Validation{}
-	_,err:=valid.Valid(admins)
-	if err!=nil{
+func RegisterA(adminLogin, adminPwd, adminNickname, adminName, adminMobile, adminSex, adminEmail string) bool {
+	admins := &Admins{}
+	err := collectionAdmins.Find(bson.M{"admin_login": adminLogin}).One(admins)
+	if err == nil {
+		logs.Info("管理员已存在")
 		return false
 	}
-	err=collectionCustomers.Insert(admins)
-	if err!=nil{
+
+	admins = &Admins{
+		AdminLogin:    adminLogin,
+		AdminPwd:      adminPwd,
+		AdminNickName: adminNickname,
+		AdminName:     adminName,
+		AdminMobile:   adminMobile,
+		AdminSex:      adminSex,
+		AdminEmail:    adminEmail,
+		Available:     true,
+		Latest:        time.Now().Format("2006-01-02 15:04:05"),
+	}
+	//验证用户输入信息格式是否正确
+	valid := validation.Validation{}
+	_, err = valid.Valid(admins)
+	if err != nil {
+		return false
+	}
+	err = collectionAdmins.Insert(admins)
+
+	if err != nil {
 		return false
 	}
 	return true
+}
+func LoginA(adminLogin string) *Admins {
+	admins := &Admins{}
+	err := collectionAdmins.Find(bson.M{"admin_login": adminLogin}).One(admins)
+	if err != nil {
+		return nil
+	}
+	return admins
 }

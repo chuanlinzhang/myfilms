@@ -1,6 +1,9 @@
 package films
 
-import "gopkg.in/mgo.v2"
+import (
+	"gopkg.in/mgo.v2"
+	"bs/myfilms/models/mongoDB"
+)
 
 /*
 电影院放映厅
@@ -13,5 +16,10 @@ type Zones struct {
 }
 var collectionZones *mgo.Collection
 func init() {
+	dbname:=Dbname
+	conn:=mongoDB.Dbsession.Copy()
+	DB:=conn.DB(dbname)
+
+
 	collectionZones=DB.C("zones")
 }

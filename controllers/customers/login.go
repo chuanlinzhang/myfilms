@@ -34,5 +34,6 @@ func (this *LoginController) Login() {
 		return
 	}
 	this.SetSession("customers", customers)
-   this.TplName="customers-function2.html"
+   //this.TplName="customers-function1.html"
+   this.Redirect(beego.URLFor("customers.ChangeController.Change1"),302)
 }

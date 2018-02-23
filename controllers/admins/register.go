@@ -3,6 +3,7 @@ package admins
 import (
 	"github.com/astaxie/beego"
 	"bs/myfilms/models/users"
+
 )
 
 type RegisterController struct {
