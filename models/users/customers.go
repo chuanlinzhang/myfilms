@@ -13,6 +13,7 @@ import (
 	"bs/myfilms/models/mongoDB"
 	"github.com/astaxie/beego/logs"
 
+
 )
 
 type Customers struct {
@@ -33,16 +34,15 @@ type Customers struct {
 var collectionCustomers *mgo.Collection
 
 func init() {
-	dbname:=films.Dbname
-	conn:=mongoDB.Dbsession.Copy()
-	DB:=conn.DB(dbname)
+	dbname := films.Dbname
+	conn := mongoDB.Dbsession.Copy()
+	DB := conn.DB(dbname)
 	collectionCustomers = DB.C("customers")
 }
 func Register(loginName, pwd, email, nickName, name, moile, sex string) bool {
 
-
-	customers:=&Customers{}
-	err:=collectionCustomers.Find(bson.M{"login_name":loginName}).One(customers)
+	customers := &Customers{}
+	err := collectionCustomers.Find(bson.M{"login_name": loginName}).One(customers)
 	if err == nil {
 		logs.Info("用户已存在")
 		return false
@@ -62,9 +62,9 @@ func Register(loginName, pwd, email, nickName, name, moile, sex string) bool {
 		Latest:    time.Now().Format("2006-01-02 15:04:05"),
 	}
 	//验证用户输入信息格式是否正确
-	valid:=validation.Validation{}
-	_,err=valid.Valid(customers)
-	if err!=nil{
+	valid := validation.Validation{}
+	_, err = valid.Valid(customers)
+	if err != nil {
 		return false
 	}
 	err = collectionCustomers.Insert(customers)
@@ -74,10 +74,64 @@ func Register(loginName, pwd, email, nickName, name, moile, sex string) bool {
 	return true
 }
 func Login(loginName string) *Customers {
-	customers:=&Customers{}
-	err:=collectionCustomers.Find(bson.M{"login_name":loginName}).One(customers)
-	if err!=nil{
+	customers := &Customers{}
+	err := collectionCustomers.Find(bson.M{"login_name": loginName}).One(customers)
+	if err != nil {
 		return nil
 	}
 	return customers
 }
+func Change(loginName, email, nickName, name, moile, sex string) bool {
+	err := collectionCustomers.Update(bson.M{"login_name": loginName}, bson.M{"$set": bson.M{
+		"email":     email,
+		"nick_name": nickName,
+		"name":      name,
+		"mobile":    moile,
+		"sex":       sex,
+	}})
+	if err != nil {
+		return false
+	}
+	return true
+}
+func ChangePwd(loginName, newPwd1 string) bool {
+	err := collectionCustomers.Update(bson.M{"login_name": loginName}, bson.M{"$set": bson.M{"pwd": newPwd1}})
+	if err != nil {
+		return false
+	}
+	return true
+}
+func TopUp(loginName,pwd string,balance float64) bool {
+     err:=collectionCustomers.Update(bson.M{"login_name":loginName,"pwd":pwd},bson.M{"$set":bson.M{"balance":balance}})
+     if err!=nil{
+     	return false
+	 }
+	 return true
+}
+//获取所以的用户
+func CustomersTreeGrid() []Customers  {
+	//查询所有
+	 list :=make([]Customers,0)//定义一个切片
+	collectionCustomers.Find(nil).All(&list)
+   return list
+}
+
+func DelCus(loginName string) bool {
+	err:=collectionCustomers.Remove(bson.M{"login_name":loginName})
+	if err!=nil{
+		return false
+	}
+	return true
+}
+////将资源列表转成treegrid格式
+//func resourceList2TreeGrid(list []*Customers) []*Customers {
+//	result := make([]*Customers, 0)
+//	for _, item := range list {
+//		if item.Parent == nil || item.Parent.Id == 0 {
+//			item.Level = 0
+//			result = append(result, item)
+//			result = resourceAddSons(item, list, result)
+//		}
+//	}
+//	return result
+//}

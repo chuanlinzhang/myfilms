@@ -14,6 +14,7 @@ func (this *RegisterController) Get() {
 	this.TplName = "customers-register.html"
 }
 func (this *RegisterController) Register() {
+
 	cname := this.GetString("cname")
 	cpwd1 := this.GetString("cpwd1")
 	cpwd2 := this.GetString("cpwd2")

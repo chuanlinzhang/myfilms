@@ -37,12 +37,131 @@
             <li><a href="/admins-member2">删除会员</a></li>
         </ul>
     </li>
-    <div style="border-color: seagreen;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>当前用户：{{ .admins.AdminNickName}}</span><br><br>
+    <div style="border-color: seagreen;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px;float: left">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>管理员：{{ .admins.AdminNickName}}</span><br><br>
         <a href="/admins/exit">
             <span style="color:rebeccapurple;font-size: 12px;position: relative;left: 30px" >退出登录</span>
         </a>
     </div>
+    <div id="d1">
+
+        <section class="content container-fluid">
+            <!-- 页面内容开始 -->
+            <div class="row">
+                <div class="col-md-7">
+                    <form id="thisForm">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">添加影片</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <input type="hidden" name="Id" value="{{.m.Id}}">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>影片编号</label>
+                                                    <input type="text" name="UserName" class="form-control" placeholder="长度不超过24" value="{{ .customers.LoginName}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>中文片名</label>
+                                                    <input type="text" name="RealName" class="form-control" placeholder="长度不超过16" value="{{ .customers.Email}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>英文片名</label>
+                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Nickname}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>导演</label>
+                                                    <input type="text" name="Email" class="form-control" placeholder="" value="{{ .customers.Name }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>主演</label>
+                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Mobile}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>片长</label>
+                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{.customers.Spent}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>总消费金额</label>
+                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{.customers.Spent}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>全票价</label>
+                                                    <input type="text" name="Email" class="form-control" placeholder="" value="{{ .customers.Balance}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>学生票价</label>
+                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Memlv}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>该影片资料是否有效</label>
+                                                    <input type="text" name="Email" class="form-control" placeholder="" value="{{ .customers.Latest}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>最后一次更新时间</label>
+                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Memlv}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>影片简介</label>
+                                                    <textarea rows="3" cols="10" name="Email" class="form-control" placeholder="" value="{{ .customers.Sex }}"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer align-right">
+                                <button type="submit" class="btn btn-primary">保 存</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
 </ul>
+
+<textarea rows="3" cols="10" name="Email" class="form-control" placeholder="" value="{{ .customers.Sex }}"></textarea>
 添加影片
 {{end}}

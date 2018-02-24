@@ -13,6 +13,7 @@ import (
 	"time"
 	"bs/myfilms/models/mongoDB"
 	"github.com/astaxie/beego/logs"
+	"fmt"
 )
 
 type Admins struct {
@@ -75,4 +76,25 @@ func LoginA(adminLogin string) *Admins {
 		return nil
 	}
 	return admins
+}
+func ChangeA(adminLogin,adminNickname,adminName,adminMobile,adminSex,adminEmail string) bool {
+	err:=collectionAdmins.Update(bson.M{"admin_login":adminLogin},bson.M{"$set":bson.M{
+		"admin_nickname":adminNickname,
+		"admin_name":adminName,
+		"admin_mobile":adminMobile,
+		"admin_sex":adminSex,
+		"admin_email":adminEmail,
+	}})
+	if err!=nil{
+		fmt.Println("err",err)
+		return false
+	}
+	return true
+}
+func ChangePwdA(adminLogin,pwd string) bool {
+    err:=collectionAdmins.Update(bson.M{"admin_login":adminLogin},bson.M{"$set":bson.M{"admin_pwd":pwd}})
+    if err!=nil{
+    	return false
+	}
+	return true
 }

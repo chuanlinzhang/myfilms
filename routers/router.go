@@ -27,8 +27,11 @@ func init() {
 
 	beego.Router("/customers-function1", &customers.ChangeController{}, "Get:Change1")
 	beego.Router("/customers-function2", &customers.ChangeController{}, "Get:Change2")
+	beego.Router("/customers-function2/check",&customers.ChangeController{},"Post:Change")
 	beego.Router("/customers-function3", &customers.ChangeController{}, "Get:Change3")
+	beego.Router("/customers-function3/check",&customers.ChangeController{},"Post:ChangePwd")
 	beego.Router("/customers-function4", &customers.ChangeController{}, "Get:Change4")
+	beego.Router("/customers-function4/check",&customers.ChangeController{},"Post:TopUp")
 
 	beego.Router("/customers-tickets1", &tickets.ChangeTicketController{}, "Get:ChangeTicket1")
 	beego.Router("/customers-tickets2", &tickets.ChangeTicketController{}, "Get:ChangeTicket2")
@@ -46,7 +49,9 @@ func init() {
 
 	beego.Router("/admins-function1", &admins.ChangeController{}, "Get:Change1")
 	beego.Router("/admins-function2", &admins.ChangeController{}, "Get:Change2")
+	beego.Router("/admins-function2/check",&admins.ChangeController{},"Post:Change")
 	beego.Router("/admins-function3", &admins.ChangeController{}, "Get:Change3")
+	beego.Router("/admins-function3/check",&admins.ChangeController{},"Post:ChangePwd")
 
 	beego.Router("/admins-movie1", &films.AdminfilmController{}, "Get:Adminflim1")
 	beego.Router("/admins-movie2", &films.AdminfilmController{}, "Get:Adminflim2")
@@ -55,5 +60,6 @@ func init() {
 
 	beego.Router("/admins-member1", &admins.ChangeController{}, "Get:ChangeCustomers1")
 	beego.Router("/admins-member2", &admins.ChangeController{}, "Get:ChangeCustomers2")
+	beego.Router("/admins-member2/delCus",&admins.ChangeController{},"Get:DelCus")
 
 }
