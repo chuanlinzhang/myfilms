@@ -16,7 +16,7 @@ type Zones struct {
 }
 var collectionZones *mgo.Collection
 func init() {
-	dbname:=Dbname
+	dbname:=mongoDB.Dbname
 	conn:=mongoDB.Dbsession.Copy()
 	DB:=conn.DB(dbname)
 

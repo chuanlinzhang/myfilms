@@ -14,20 +14,22 @@ func (thhis *ChangeController) Get() {
 
 }
 func (this *ChangeController) Change() {
-	adminLogin := this.GetString("adminLogin")
-	adminNickName := this.GetString("adminNickName")
-	adminName := this.GetString("adminName")
-	adminMobile := this.GetString("adminMobile")
-	adminSex := this.GetString("adminSex")
-	adminEmail := this.GetString("adminEmail")
+	//adminLogin := this.GetString("adminLogin")
+	//adminNickName := this.GetString("adminNickName")
+	//adminName := this.GetString("adminName")
+	//adminMobile := this.GetString("adminMobile")
+	//adminSex := this.GetString("adminSex")
+	//adminEmail := this.GetString("adminEmail")
 	//admins:=this.GetSession("admins").(users.Admins)
-	b := users.ChangeA(adminLogin, adminNickName, adminName, adminMobile, adminSex, adminEmail)
+	admin:=users.Admins{}
+	this.ParseForm(&admin)
+	b := users.ChangeA(admin.AdminLogin, admin.AdminNickName, admin.AdminName, admin.AdminMobile, admin.AdminSex, admin.AdminEmail)
 	if b == false {
 		logs.Info("管理员信息修改失败")
 		this.Redirect("/admins-function1", 302)
 		return
 	}
-	admins := users.LoginA(adminLogin)
+	admins := users.LoginA(admin.AdminLogin)
 	this.SetSession("admins", admins)
 	logs.Info("管理员信息修改成功")
 	this.Redirect("/admins-function1", 302)

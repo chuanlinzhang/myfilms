@@ -1,7 +1,15 @@
 {{template "base/base.html" .}}
 {{define "head"}}
 <title>{{i18n .Lang "welcome"}} - {{i18n .Lang "app_intro"}}</title>
-
+<style type="text/css">
+    #d1{
+        position: absolute;
+        left:18%;
+        top:10%;
+        width: 98%;
+        height: 90%;
+    }
+</style>
 {{end}}
 {{define "body"}}
 
@@ -49,7 +57,7 @@
             <!-- 页面内容开始 -->
             <div class="row">
                 <div class="col-md-7">
-                    <form id="thisForm">
+                    <form id="thisForm" action="/admins-movie2/check" method="post">
                         <div class="box box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">添加影片</h3>
@@ -68,13 +76,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>影片编号</label>
-                                                    <input type="text" name="UserName" class="form-control" placeholder="长度不超过24" value="{{ .customers.LoginName}}">
+                                                    <input type="text" name="filmsNo" class="form-control"  readonly="true " placeholder="长度不超过10" value="{{ .sum}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>中文片名</label>
-                                                    <input type="text" name="RealName" class="form-control" placeholder="长度不超过16" value="{{ .customers.Email}}">
+                                                    <input type="text" name="nameCh" class="form-control" placeholder="长度不超过16">
                                                 </div>
                                             </div>
                                         </div>
@@ -82,13 +90,27 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>英文片名</label>
-                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Nickname}}">
+                                                    <input type="text" name="nameEn" class="form-control" placeholder="" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>导演</label>
-                                                    <input type="text" name="Email" class="form-control" placeholder="" value="{{ .customers.Name }}">
+                                                    <input type="text" name="director" class="form-control" placeholder="" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>热度</label>
+                                                    <input type="text" name="hot" class="form-control" placeholder="最高热度为10分" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>新片</label>
+                                                    <input type="text" name="new" class="form-control" placeholder="最新片为10分" >
                                                 </div>
                                             </div>
                                         </div>
@@ -96,57 +118,40 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>主演</label>
-                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Mobile}}">
+                                                    <input type="text" name="actor" class="form-control" placeholder="" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>片长</label>
-                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{.customers.Spent}}">
+                                                    <input type="text" name="filmLength" class="form-control" placeholder="分钟" >
+
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>总消费金额</label>
-                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{.customers.Spent}}">
-                                                </div>
-                                            </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>全票价</label>
-                                                    <input type="text" name="Email" class="form-control" placeholder="" value="{{ .customers.Balance}}">
+                                                    <input type="text" name="Pricefull" class="form-control" placeholder="元" >
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>学生票价</label>
-                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Memlv}}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>该影片资料是否有效</label>
-                                                    <input type="text" name="Email" class="form-control" placeholder="" value="{{ .customers.Latest}}">
+                                                    <input type="text" name="Pricest" class="form-control" placeholder="元" >
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>最后一次更新时间</label>
-                                                    <input type="text" name="Mobile" class="form-control" placeholder="" value="{{ .customers.Memlv}}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
                                                     <label>影片简介</label>
-                                                    <textarea rows="3" cols="10" name="Email" class="form-control" placeholder="" value="{{ .customers.Sex }}"></textarea>
+                                                    <textarea rows="3" cols="50" name="Intro" ></textarea>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -162,6 +167,6 @@
     </div>
 </ul>
 
-<textarea rows="3" cols="10" name="Email" class="form-control" placeholder="" value="{{ .customers.Sex }}"></textarea>
+
 添加影片
 {{end}}
