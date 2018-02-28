@@ -5,43 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/views/customers-tickets3.html" line="75" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b721d17d-d87c-4374-a16a-1d23cdb32f18" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controllers/admins/change.go" afterPath="$PROJECT_DIR$/controllers/admins/change.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/admins/register.go" afterPath="$PROJECT_DIR$/controllers/admins/register.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/customers/register.go" afterPath="$PROJECT_DIR$/controllers/customers/register.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/films/adminfilm.go" afterPath="$PROJECT_DIR$/controllers/films/adminfilm.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/films/lookfilm.go" afterPath="$PROJECT_DIR$/controllers/films/lookfilm.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/orders/changeorder.go" afterPath="$PROJECT_DIR$/controllers/orders/changeorder.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/tickets/changeticket.go" afterPath="$PROJECT_DIR$/controllers/tickets/changeticket.go" />
-      <change beforePath="$PROJECT_DIR$/models/films/db.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/models/films/films.go" afterPath="$PROJECT_DIR$/models/films/films.go" />
-      <change beforePath="$PROJECT_DIR$/models/films/orders.go" afterPath="$PROJECT_DIR$/models/films/orders.go" />
-      <change beforePath="$PROJECT_DIR$/models/films/seats.go" afterPath="$PROJECT_DIR$/models/films/seats.go" />
-      <change beforePath="$PROJECT_DIR$/models/films/tickets.go" afterPath="$PROJECT_DIR$/models/films/tickets.go" />
-      <change beforePath="$PROJECT_DIR$/models/films/zones.go" afterPath="$PROJECT_DIR$/models/films/zones.go" />
-      <change beforePath="$PROJECT_DIR$/models/mongoDB/DB.go" afterPath="$PROJECT_DIR$/models/mongoDB/DB.go" />
-      <change beforePath="$PROJECT_DIR$/models/users/admins.go" afterPath="$PROJECT_DIR$/models/users/admins.go" />
-      <change beforePath="$PROJECT_DIR$/models/users/customers.go" afterPath="$PROJECT_DIR$/models/users/customers.go" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" afterPath="$PROJECT_DIR$/routers/router.go" />
-      <change beforePath="$PROJECT_DIR$/views/admins-function2.html" afterPath="$PROJECT_DIR$/views/admins-function2.html" />
-      <change beforePath="$PROJECT_DIR$/views/admins-movie1.html" afterPath="$PROJECT_DIR$/views/admins-movie1.html" />
-      <change beforePath="$PROJECT_DIR$/views/admins-movie2.html" afterPath="$PROJECT_DIR$/views/admins-movie2.html" />
-      <change beforePath="$PROJECT_DIR$/views/admins-movie3.html" afterPath="$PROJECT_DIR$/views/admins-movie3.html" />
-      <change beforePath="$PROJECT_DIR$/views/admins-movie4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/customers-function1.html" afterPath="$PROJECT_DIR$/views/customers-function1.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-function2.html" afterPath="$PROJECT_DIR$/views/customers-function2.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-function3.html" afterPath="$PROJECT_DIR$/views/customers-function3.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-function4.html" afterPath="$PROJECT_DIR$/views/customers-function4.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-order1.html" afterPath="$PROJECT_DIR$/views/customers-order1.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-order2.html" afterPath="$PROJECT_DIR$/views/customers-order2.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-ranking1.html" afterPath="$PROJECT_DIR$/views/customers-ranking1.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-ranking2.html" afterPath="$PROJECT_DIR$/views/customers-ranking2.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-ranking3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/customers-tickets1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/views/customers-tickets2.html" afterPath="$PROJECT_DIR$/views/customers-tickets2.html" />
-      <change beforePath="$PROJECT_DIR$/views/customers-tickets3.html" afterPath="$PROJECT_DIR$/views/customers-tickets3.html" />
-    </list>
+    <list default="true" id="b721d17d-d87c-4374-a16a-1d23cdb32f18" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,149 +27,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="orders.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/films/orders.go">
+      <file leaf-file-name="admins.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/admins/admins.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminfilm.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/films/adminfilm.go">
+      <file leaf-file-name="exit.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/admins/exit.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+            <state relative-caret-position="72">
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/admins/login.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="change.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/customers/change.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="37" column="55" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="55" />
               <folding>
-                <element signature="e#2923#2997#0" expanded="false" />
+                <element signature="n#!!block;n#TopUp#0" expanded="false" />
+                <element signature="n#!!block;n#Change1#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tickets.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/films/tickets.go">
+      <file leaf-file-name="customers.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/customers/customers.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+            <state relative-caret-position="-187">
+              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changeticket.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/tickets/changeticket.go">
+      <file leaf-file-name="change.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/admins/change.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customers-ranking1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/customers-ranking1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-745">
-              <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changeorder.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/orders/changeorder.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="47" column="28" lean-forward="true" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="288">
+              <caret line="87" column="38" lean-forward="true" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
               <folding>
-                <element signature="e#16#124#0" expanded="true" />
-                <element signature="n#!!block;n#ChangeOrder1#0" expanded="false" />
-                <element signature="n#!!block;n#DelOrder#0" expanded="false" />
-                <element signature="n#!!block;n#Grade#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customers-ranking2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/customers-ranking2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-691">
-              <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customers-order2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/customers-order2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customers-tickets3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/customers-tickets3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="57" column="54" lean-forward="true" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="58" />
-              <folding>
-                <element signature="e#1726#1845#0#HTML" expanded="true" />
-                <element signature="e#2108#2158#0#HTML" expanded="true" />
-                <element signature="e#2349#2355#0#HTML" expanded="true" />
-                <element signature="e#2355#2361#0#HTML" expanded="true" />
-                <element signature="e#2361#2367#0#HTML" expanded="true" />
-                <element signature="e#2367#2373#0#HTML" expanded="true" />
-                <element signature="e#2431#2437#0#HTML" expanded="true" />
-                <element signature="e#2437#2443#0#HTML" expanded="true" />
-                <element signature="e#2443#2449#0#HTML" expanded="true" />
-                <element signature="e#2449#2455#0#HTML" expanded="true" />
-                <element signature="e#2513#2519#0#HTML" expanded="true" />
-                <element signature="e#2519#2525#0#HTML" expanded="true" />
-                <element signature="e#2525#2531#0#HTML" expanded="true" />
-                <element signature="e#2531#2537#0#HTML" expanded="true" />
-                <element signature="e#2595#2601#0#HTML" expanded="true" />
-                <element signature="e#2601#2607#0#HTML" expanded="true" />
-                <element signature="e#2607#2613#0#HTML" expanded="true" />
-                <element signature="e#2613#2619#0#HTML" expanded="true" />
-                <element signature="e#2677#2683#0#HTML" expanded="true" />
-                <element signature="e#2683#2689#0#HTML" expanded="true" />
-                <element signature="e#2689#2695#0#HTML" expanded="true" />
-                <element signature="e#2695#2701#0#HTML" expanded="true" />
-                <element signature="e#2759#2765#0#HTML" expanded="true" />
-                <element signature="e#2765#2771#0#HTML" expanded="true" />
-                <element signature="e#2771#2777#0#HTML" expanded="true" />
-                <element signature="e#2777#2783#0#HTML" expanded="true" />
-                <element signature="e#2841#2847#0#HTML" expanded="true" />
-                <element signature="e#2847#2853#0#HTML" expanded="true" />
-                <element signature="e#2853#2859#0#HTML" expanded="true" />
-                <element signature="e#2859#2865#0#HTML" expanded="true" />
-                <element signature="e#2923#2929#0#HTML" expanded="true" />
-                <element signature="e#2929#2935#0#HTML" expanded="true" />
-                <element signature="e#2935#2941#0#HTML" expanded="true" />
-                <element signature="e#2941#2947#0#HTML" expanded="true" />
-                <element signature="e#3005#3011#0#HTML" expanded="true" />
-                <element signature="e#3011#3017#0#HTML" expanded="true" />
-                <element signature="e#3017#3023#0#HTML" expanded="true" />
-                <element signature="e#3023#3029#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customers-tickets2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/customers-tickets2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="92" column="71" lean-forward="false" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="71" />
-              <folding>
-                <element signature="e#2108#2127#0#HTML" expanded="true" />
+                <element signature="n#!!block;n#ChangePwd#0" expanded="false" />
+                <element signature="n#!!block;n#Change1#0" expanded="false" />
+                <element signature="n#!!block;n#Change2#0" expanded="false" />
+                <element signature="n#!!block;n#Change3#0" expanded="false" />
+                <element signature="n#!!block;n#ChangeCustomers1#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -321,74 +206,13 @@
             <path>
               <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
               <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
               <item name="myfilms" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="films" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="orders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="films" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="mongoDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myfilms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myfilms" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="customers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,6 +282,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",Show package structure" />
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -469,9 +296,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20196672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20196672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3464837" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -506,20 +332,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/admins-function3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admins-member2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/customers-register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -585,13 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admins/login.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/admins/register.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -620,6 +425,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -651,17 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/customers/change.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="37" column="55" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!block;n#TopUp#0" expanded="false" />
-            <element signature="n#!!block;n#Change1#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/films/films_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -685,31 +480,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admins/admins.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#78#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/admins/change.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="87" column="38" lean-forward="true" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
-          <folding>
-            <element signature="e#16#87#0" expanded="false" />
-            <element signature="n#!!block;n#ChangePwd#0" expanded="false" />
-            <element signature="n#!!block;n#Change1#0" expanded="false" />
-            <element signature="n#!!block;n#Change2#0" expanded="false" />
-            <element signature="n#!!block;n#Change3#0" expanded="false" />
-            <element signature="n#!!block;n#ChangeCustomers1#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,11 +731,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/films/adminfilm.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+        <state relative-caret-position="72">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
             <element signature="e#2923#2997#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/admins/change.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="87" column="38" lean-forward="true" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!block;n#ChangePwd#0" expanded="false" />
+            <element signature="n#!!block;n#Change1#0" expanded="false" />
+            <element signature="n#!!block;n#Change2#0" expanded="false" />
+            <element signature="n#!!block;n#Change3#0" expanded="false" />
+            <element signature="n#!!block;n#ChangeCustomers1#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/admins/admins.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/admins/exit.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/admins/login.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/customers/change.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="37" column="55" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="55" />
+          <folding>
+            <element signature="n#!!block;n#TopUp#0" expanded="false" />
+            <element signature="n#!!block;n#Change1#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/customers/customers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
