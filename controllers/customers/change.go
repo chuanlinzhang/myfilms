@@ -26,6 +26,7 @@ func (this *ChangeController) Change() {
 		this.TplName = "customers-function1.html"
 		return
 	}
+
 	customers := users.Login(cname)
 	this.SetSession("customers", customers)
 	logs.Info("用户信息修改成功")
@@ -46,7 +47,7 @@ func (this *ChangeController) ChangePwd() {
 		this.Redirect("/customers-function3",302)
 		return
 	}
-	b := users.ChangePwd(c.LoginName, newPwd1)
+	b := users.ChangePwd(c.LoginName,c.Email,newPwd1)
 	if b == false {
 		logs.Info("用户密码修改失败")
 		this.Redirect("/customers-function3",302)

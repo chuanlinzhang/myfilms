@@ -21,5 +21,6 @@ func Lang()  {
 	}
 }
 func (this *BaseController) Get()  {
+	//this.TplName="404.html"
 	this.Redirect(beego.URLFor("customers.LoginController.Get"),302)
 }

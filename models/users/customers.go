@@ -12,6 +12,7 @@ import (
 	"gopkg.in/mgo.v2/bson"
 	"bs/myfilms/models/mongoDB"
 	"github.com/astaxie/beego/logs"
+	"bs/myfilms/models/sendemail"
 )
 
 type Customers struct {
@@ -114,13 +115,16 @@ func Change(loginName, email, nickName, name, moile, sex string) bool {
 	if err != nil {
 		return false
 	}
+	go sendemail.ChangeInfoSE(loginName,email)
 	return true
 }
-func ChangePwd(loginName, newPwd1 string) bool {
+func ChangePwd(loginName,email, newPwd1 string) bool {
 	err := collectionCustomers.Update(bson.M{"login_name": loginName}, bson.M{"$set": bson.M{"pwd": newPwd1}})
 	if err != nil {
 		return false
 	}
+
+	go sendemail.ChangePwdSE(loginName,email)
 	return true
 }
 func TopUp(loginName, pwd string, balance float64) bool {

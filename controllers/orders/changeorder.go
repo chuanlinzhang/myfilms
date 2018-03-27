@@ -5,6 +5,7 @@ import (
 	"bs/myfilms/models/users"
 	"strconv"
 	"github.com/astaxie/beego/logs"
+	"bs/myfilms/models/sendemail"
 )
 
 type ChangeOrderController struct {
@@ -43,6 +44,7 @@ func (this *ChangeOrderController) AddOrder() {
 		this.Redirect("/customers-tickets2", 302)
 		return
 	}
+	go sendemail.BuyTicket(customers.LoginName,customers.Email)
 	logs.Info("添加订单成功")
 	t,_:=strconv.Atoi(Tno)
 	_=films.DeleteTickets(t)
