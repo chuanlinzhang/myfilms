@@ -17,6 +17,9 @@ func init() {
 	beego.Router("/customers/login", &customers.LoginController{})
 	beego.Router("/customers/login/check", &customers.LoginController{}, "Post:Login")
 	beego.Router("/customers/exit", &customers.ExitController{}, "Get:Exit")
+	beego.Router("/forgetpassword/into",&customers.ForgetPwdController{})
+	beego.Router("/forgetpassword/get",&customers.ForgetPwdController{},"Post:GetAuth")
+	beego.Router("/forgetpassword/auth",&customers.ForgetPwdController{},"Post:Auth")
 
 	beego.Router("/customers/register", &customers.RegisterController{})
 	beego.Router("/customers/register/check", &customers.RegisterController{}, "Post:Register")
@@ -71,5 +74,6 @@ func init() {
 	beego.Router("/admins-member1", &admins.ChangeController{}, "Get:ChangeCustomers1")
 	beego.Router("/admins-member2", &admins.ChangeController{}, "Get:ChangeCustomers2")
 	beego.Router("/admins-member2/delCus", &admins.ChangeController{}, "Get:DelCus")
+
 
 }

@@ -45,3 +45,21 @@ func BuyTicket(cname,toEmail string)  {
 		log.Println("邮件发生成功")
 	}
 }
+//忘记密码获取验证码
+func GetAuth(cname,toEmail,authCode string)  {
+	subject:="获取随机验证码"
+	body:="你好"+cname+"：本次随机验证码为："+authCode+"，10分钟有效"
+	b:=sendEmail(cname,toEmail,subject,body)
+	if b==true{
+		log.Println("邮件发生成功")
+	}
+}
+//忘记密码验证验证码
+func CheckAuth(cname,toEmail,pwd string)  {
+	subject:="密码"
+	body:="你好"+cname+"：你的密码为："+pwd+"，请记住你的密码！"
+	b:=sendEmail(cname,toEmail,subject,body)
+	if b==true{
+		log.Println("邮件发生成功")
+	}
+}
