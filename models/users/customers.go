@@ -18,10 +18,10 @@ import (
 type Customers struct {
 	LoginName string  `bson:"login_name" form:"cname"` //登陆账号
 	Pwd       string  `bson:"pwd" form:"cpwd1"`        //登录密码
-	Email     string  `bson:"email" form:"cemail"`      //Email
+	Email     string  `bson:"email" form:"cemail" valid:"Email; MaxSize(100)"`      //Email
 	Nickname  string  `bson:"nick_name" form:"nick_name"`  //昵称
 	Name      string  `bson:"name" form:"name"`       //会员实名
-	Mobile    string  `bson:"mobile" form:"mobile"`     //手机号码
+	Mobile    string  `bson:"mobile" form:"mobile" valid:"Mobile"`     //手机号码
 	Sex       string  `bson:"sex" form:"sex"`        //性别
 	Spent     float64 `bson:spent`                     //总消费金额
 	Balance   float64 `bson:"balance"`                 //余额

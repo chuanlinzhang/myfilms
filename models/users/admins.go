@@ -13,6 +13,7 @@ import (
 	"bs/myfilms/models/mongoDB"
 	"github.com/astaxie/beego/logs"
 	"fmt"
+	"log"
 )
 
 type Admins struct {
@@ -20,7 +21,7 @@ type Admins struct {
 	AdminPwd      string `bson:"admin_pwd" form:"admin_pwd1"`      //管理员登陆密码
 	AdminNickName string `bson:"admin_nickname" form:"admin_nickname"` //管理员昵称
 	AdminName     string `bson:"admin_name" form:"admin_name"`     //管理员实名
-	AdminMobile   string `bson:"admin_mobile" form:"admin_mobile"`   //管理员手机号码
+	AdminMobile   string `bson:"admin_mobile" form:"admin_mobile" valid:"Mobile"`   //管理员手机号码
 	AdminSex      string `bson:"admin_sex" form:"admin_sex"`      //管理员性别
 	AdminEmail    string `bson:"admin_email" form:"admin_email"`    //管理员Email
 	Available     bool   `bson:"available"`                         //资料是否有效
@@ -46,8 +47,9 @@ func RegisterA1(admins1 Admins) bool {
 	admins1.Latest=time.Now().Format("2006-01-02 15:04:05")
 	//验证用户输入信息格式是否正确
 	valid := validation.Validation{}
-	_, err = valid.Valid(admins1)
-	if err != nil {
+	b, err := valid.Valid(admins1)
+	if err != nil&&!b {
+		log.Println("邮箱或者手机号码格式不符合")
 		return false
 	}
 	err = collectionAdmins.Insert(admins1)
