@@ -83,7 +83,7 @@ func add(this *AdminfilmController) {
 	obj := films.Films{}
 	this.ParseForm(&obj)
 	b := films.Addfilms1(obj)
-	films.MakeTickets(obj)
+	go films.MakeTickets(obj)
 	//filmLength1, err := strconv.Atoi(filmLength)
 	//if err != nil {
 	//	logs.Info("数据类型转化错误，添加影片失败")
