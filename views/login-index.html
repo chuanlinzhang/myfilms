@@ -6,24 +6,30 @@
          background-color: #458B00;
          width: 350px;
      }
+     body {
+         background:url("/static/img/t2.jpg");
+         background-size: auto;
+         background-position:center;
+     }
 </style>
 {{end}}
 {{define "body"}}
 
+
 <div class="container" style="width: 550px;">
-    <h3>{{i18n .Lang "logintitle"}}</h3><br/><br/><br/><br/>
+    <h2 style="color: yellow">{{i18n .Lang "logintitle"}}</h2><br/><br/>
     <form action="/customers/login/check" method="post" class="form-horizontal">
         <div class="form-group has-success">
             <label class="col-sm-2 control-label" for="inputSuccess">输入账号</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputSuccess" name="login_name">
+                <input type="text" class="form-control" id="inputSuccess" name="login_name" style="border:2px solid yellowgreen;background:rgba(0, 0, 0, 0);">
             </div>
         </div>
         <br/><br/>
         <div class="form-group has-success">
             <label class="col-sm-2 control-label" for="inputSuccess">输入密码</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputSuccess" name="pwd">
+                <input type="password" class="form-control" id="inputSuccess" name="pwd" style="border:2px solid yellowgreen;background:rgba(0, 0, 0, 0);">
             </div>
         </div>
         <br/><br/><br/>
@@ -36,4 +42,5 @@
         </div>
     </form>
 </div>
+
 {{end}}

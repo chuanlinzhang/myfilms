@@ -21,8 +21,6 @@ type Tickets struct {
 	NameCh  string  `bson:"name_ch"`  //中文片名
 	NameEn  string  `bson:"name_en"`  //英文片名
 	Amount  float64 `bson:"amount"`   //订单金额
-	//Mobile     string  `bson:"mobile"`      //付款方式
-	//Status     string  `bson:"status"`      //订单状态
 	StartTime  string `bson:"start_time"`  //放映时间
 	FilmLength int    `bson:"film_length"` //片长
 	Seat       string `bson:"seat"`        //座位号

@@ -1,7 +1,17 @@
 {{template "base/base.html" .}}
 {{define "head"}}
 <title>{{i18n .Lang "welcome"}} - {{i18n .Lang "app_intro"}}</title>
-
+<style type="text/css">
+    #su {
+        background-color: #458B00;
+        width: 350px;
+    }
+    body {
+        background:url("/static/img/t7.jpg");
+        background-size: auto;
+        background-position:center;
+    }
+</style>
 {{end}}
 {{define "body"}}
 
@@ -37,12 +47,12 @@
             <li><a href="/admins-member2">删除会员</a></li>
         </ul>
     </li>
-    <div style="border-color: seagreen;float: left;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>管理员：{{ .admins.AdminNickName}}</span><br><br>
-        <a href="/admins/exit">
-            <span style="color:rebeccapurple;font-size: 12px;position: relative;left: 30px" >退出登录</span>
-        </a>
-    </div>
+    {{/*<div style="border-color: seagreen;float: left;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px">*/}}
+        {{/*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>管理员：{{ .admins.AdminNickName}}</span><br><br>*/}}
+        {{/*<a href="/admins/exit">*/}}
+            {{/*<span style="color:rebeccapurple;font-size: 12px;position: relative;left: 30px" >退出登录</span>*/}}
+        {{/*</a>*/}}
+    {{/*</div>*/}}
     <div style="float: left">
         <table class="table">
             <caption>影片信息</caption>

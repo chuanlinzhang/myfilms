@@ -6,12 +6,17 @@
         background-color: #458B00;
         width: 350px;
     }
+    body {
+        background:url("/static/img/t2.jpg");
+        background-size: auto;
+        background-position:center;
+    }
 </style>
 {{end}}
 {{define "body"}}
 
 <div class="container" style="width: 550px;">
-    <h3>{{i18n .Lang "registertitle"}}</h3><br/>
+    <h3 style="color: yellow">{{i18n .Lang "registertitle"}}</h3><br/>
     <form action="/customers/register/check" method="post" class="form-horizontal">
         <div class="form-group has-success">
             <label class="col-sm-2 control-label" for="inputSuccess">登陆账号</label>
@@ -71,7 +76,7 @@
         <br/>
         <div class="form-group has-success">
             <div class="col-sm-offset-3 col-sm-10">
-                <button type="submit" class="btn btn-info" id="su">{{i18n .Lang "login"}}</button>
+                <button type="submit" class="btn btn-info" id="su">{{i18n .Lang "register"}}</button>
             </div>
         </div>
     </form>

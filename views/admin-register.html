@@ -6,6 +6,11 @@
         background-color: #458B00;
         width: 350px;
     }
+    body {
+        background:url("/static/img/t1.jpg");
+        background-size: auto;
+        background-position:center;
+    }
 </style>
 {{end}}
 {{define "body"}}
@@ -71,7 +76,7 @@
 
         <div class="form-group has-success">
             <div class="col-sm-offset-3 col-sm-10">
-                <button type="submit" class="btn btn-info" id="su">{{i18n .Lang "login"}}</button>
+                <button type="submit" class="btn btn-info" id="su">{{i18n .Lang "register"}}</button>
             </div>
         </div>
     </form>

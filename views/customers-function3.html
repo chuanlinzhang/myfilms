@@ -9,6 +9,12 @@
         width: 48%;
         height: 60%;
     }
+    body {
+        background:url("/static/img/t8.jpg");
+        background-size:auto;
+
+        background-position:center;
+    }
 </style>
 {{end}}
 {{define "body"}}
@@ -55,7 +61,7 @@
         </ul>
     </li>
     <div style="border-color: seagreen;border-width: 2px;border-style: solid;width: 180px;height: 200px;padding:10px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>当前用户：{{ .customers.Nickname}}</span><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gold">当前用户：{{ .customers.Nickname}}</span><br><br>
         <a href="/customers/exit">
             <span style="color:rebeccapurple;font-size: 12px;position: relative;left: 30px" >退出登录</span>
         </a>
@@ -78,15 +84,15 @@
             <div class="box-body">
                 <div class="form-group">
                     <label>原密码</label>
-                    <input type="password" name="oldPwd" class="form-control" placeholder="">
+                    <input type="password" name="oldPwd" class="form-control" placeholder="" style="border:2px solid #ffff00;background:rgba(0, 0, 0, 0);">
                 </div>
                 <div class="form-group">
                     <label>新密码</label>
-                    <input type="password" id="NewUserPwd" name="newPwd1" class="form-control" placeholder="">
+                    <input type="password" id="NewUserPwd" name="newPwd1" class="form-control" placeholder="" style="border:2px solid #ffff00;background:rgba(0, 0, 0, 0);">
                 </div>
                 <div class="form-group">
                     <label>确认密码</label>
-                    <input type="password" name="newPwd2" class="form-control" placeholder="">
+                    <input type="password" name="newPwd2" class="form-control" placeholder="" style="border:2px solid #ffff00;background:rgba(0, 0, 0, 0);">
                 </div>
             </div>
             <div class="box-footer align-right">

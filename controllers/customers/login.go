@@ -1,7 +1,7 @@
 package customers
 
 import (
-	"fmt"
+
 	"github.com/astaxie/beego"
 	"bs/myfilms/models/users"
 	"github.com/astaxie/beego/logs"
@@ -12,8 +12,9 @@ type LoginController struct {
 }
 
 func (this *LoginController) Get() {
-	fmt.Println("************")
+
 	this.TplName = "login-index.html"
+
 }
 func (this *LoginController) Login() {
 	login_name := this.GetString("login_name")

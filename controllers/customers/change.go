@@ -4,6 +4,10 @@ import (
 	"bs/myfilms/models/users"
 	"github.com/astaxie/beego/logs"
 	"strconv"
+	"crypto/md5"
+	"fmt"
+	"time"
+	"strings"
 )
 
 type ChangeController struct {
@@ -33,6 +37,20 @@ func (this *ChangeController) Change() {
 	this.Redirect("/customers-function1", 302)
 }
 func (this *ChangeController) ChangePwd() {
+	cookie:=this.Ctx.Request.Header.Get("Cookie")
+	cookieslice:=strings.Split(cookie,"; ")
+	tk:=this.GetSession("token").(string)
+
+			if cookieslice[0]==tk||cookieslice[1]==tk{
+				logs.Info("token 验证成功")
+			}else {
+				logs.Info("token 验证失败")
+				this.Redirect("/customers/login", 302)
+				return
+			}
+
+
+
 	oldPwd := this.GetString("oldPwd")
 	newPwd1 := this.GetString("newPwd1")
 	newPwd2 := this.GetString("newPwd2")
@@ -84,6 +102,13 @@ func (this *ChangeController) Change1() {
 
 	customers := this.GetSession("customers")
 	this.Data["customers"] = customers
+	cu:=customers.(*users.Customers)
+	data := []byte(cu.Name+cu.Pwd+time.Now().UTC().String())
+
+	has := md5.Sum(data)
+	token := fmt.Sprintf("%x", has)
+	this.SetSession("token",token)
+	this.Ctx.ResponseWriter.Header().Set("set-cookie",token)
 
 	this.TplName = "customers-function1.html"
 }
